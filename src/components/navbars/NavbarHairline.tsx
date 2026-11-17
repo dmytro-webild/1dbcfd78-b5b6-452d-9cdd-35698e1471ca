@@ -71,7 +71,7 @@ const NavbarHairline = ({
         <div className="mx-auto flex h-full w-[var(--container)] items-center justify-between gap-4">
           <a href="#" className="flex min-w-0 shrink-0 items-center gap-2 min-[94.5rem]:flex-1">
             {logoSrc ? (
-              <img src={logoSrc} alt={brand} loading="lazy" decoding="async" className="h-7 w-auto max-w-[9rem] object-contain" />
+              <img src={logoSrc} alt={brand} loading="lazy" decoding="async" className="h-8 w-auto max-w-[12rem] object-contain" />
             ) : (
               <>
                 <div className="flex size-6 shrink-0 items-center justify-center rounded-[0.375rem] bg-foreground text-background">

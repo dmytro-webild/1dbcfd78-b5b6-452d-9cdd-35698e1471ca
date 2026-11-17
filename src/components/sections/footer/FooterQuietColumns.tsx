@@ -8,6 +8,7 @@ type Column = { title: string; items: { label: string; href: string }[] };
 
 type FooterQuietColumnsProps = {
   brand?: string;
+  logoSrc?: string;
   brandIcon?: LucideIcon;
   description?: string;
   columns?: Column[];
@@ -23,6 +24,7 @@ const DEFAULT_COLUMNS: Column[] = [
 
 const FooterQuietColumns = ({
   brand = "Switchyard",
+  logoSrc,
   brandIcon: BrandIcon = Workflow,
   description = "A Lisbon studio that builds and runs automation, so your team can focus on the work that matters.",
   columns = DEFAULT_COLUMNS,
@@ -34,10 +36,16 @@ const FooterQuietColumns = ({
       <div className="flex flex-col gap-10 lg:flex-row lg:justify-between lg:gap-12">
         <div className="flex flex-col gap-4 lg:w-[16rem] lg:shrink-0">
           <div className="flex items-center gap-2.5">
-            <div aria-hidden="true" className="flex size-7 items-center justify-center rounded-[0.5rem] bg-foreground text-background">
-              <BrandIcon className="size-4" strokeWidth={2} />
-            </div>
-            <p className="text-[length:var(--text-h2)] leading-[1.2] tracking-[var(--heading-tracking)] font-medium">{brand}</p>
+            {logoSrc ? (
+              <img src={logoSrc} alt={brand} loading="lazy" decoding="async" className="h-8 w-auto max-w-[12rem] object-contain" />
+            ) : (
+              <>
+                <div aria-hidden="true" className="flex size-7 items-center justify-center rounded-[0.5rem] bg-foreground text-background">
+                  <BrandIcon className="size-4" strokeWidth={2} />
+                </div>
+                <p className="text-[length:var(--text-h2)] leading-[1.2] tracking-[var(--heading-tracking)] font-medium">{brand}</p>
+              </>
+            )}
           </div>
           {description && <p className="max-w-[16rem] text-[length:var(--text-body)] leading-relaxed text-muted-foreground">{description}</p>}
         </div>

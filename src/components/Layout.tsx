@@ -9,6 +9,7 @@ export default function Layout() {
       <header data-webild-section="Header">
         <NavbarHairline
           brand="Quantum Media"
+          logoSrc="https://storage.googleapis.com/webild/users/user_3MBZIQcCLFZBNSIE9QHse1vQg5O/uploaded-1794930471481-tbxj4c96.png"
           logoIcon={Printer}
           navItems={[
             {
@@ -40,6 +41,7 @@ export default function Layout() {
       <footer data-webild-section="Footer" data-section="footer">
         <FooterQuietColumns
           brand="Quantum Media Pvt Ltd"
+          logoSrc="https://storage.googleapis.com/webild/users/user_3MBZIQcCLFZBNSIE9QHse1vQg5O/uploaded-1794930471481-tbxj4c96.png"
           brandIcon={Printer}
           description="Harare's premier large-format printing, outdoor signage, and corporate event branding agency. Creative. Immersive. Unforgettable."
           columns={[
