@@ -9,6 +9,7 @@ type Column = { title: string; items: { label: string; href: string }[] };
 type FooterQuietColumnsProps = {
   brand?: string;
   logoSrc?: string;
+  logo?: React.ReactNode;
   brandIcon?: LucideIcon;
   description?: string;
   columns?: Column[];
@@ -25,6 +26,7 @@ const DEFAULT_COLUMNS: Column[] = [
 const FooterQuietColumns = ({
   brand = "Switchyard",
   logoSrc,
+  logo,
   brandIcon: BrandIcon = Workflow,
   description = "A Lisbon studio that builds and runs automation, so your team can focus on the work that matters.",
   columns = DEFAULT_COLUMNS,
@@ -36,7 +38,9 @@ const FooterQuietColumns = ({
       <div className="flex flex-col gap-10 lg:flex-row lg:justify-between lg:gap-12">
         <div className="flex flex-col gap-4 lg:w-[16rem] lg:shrink-0">
           <div className="flex items-center gap-2.5">
-            {logoSrc ? (
+            {logo ? (
+              logo
+            ) : logoSrc ? (
               <img src={logoSrc} alt={brand} loading="lazy" decoding="async" className="h-8 w-auto max-w-[12rem] object-contain" />
             ) : (
               <>
