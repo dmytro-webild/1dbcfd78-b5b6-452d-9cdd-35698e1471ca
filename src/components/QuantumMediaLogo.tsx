@@ -63,29 +63,27 @@ export const QuantumMediaLogo: React.FC<QuantumMediaLogoProps> = ({
 
         {/* Vector Text: QUANTUM MEDIA */}
         <g transform="translate(42, 24)">
-          {/* "QUANTUM" in bold uppercase sans vector text */}
           <text
             x="0"
             y="0"
-            fill="currentColor"
             fontFamily="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
-            fontWeight="900"
             fontSize="19"
-            letterSpacing="0.05em"
           >
-            QUANTUM
-          </text>
-          {/* "MEDIA" in accent color vector text */}
-          <text
-            x="104"
-            y="0"
-            fill="#10b981"
-            fontFamily="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
-            fontWeight="500"
-            fontSize="19"
-            letterSpacing="0.08em"
-          >
-            MEDIA
+            <tspan
+              fill="currentColor"
+              fontWeight="900"
+              letterSpacing="0.05em"
+            >
+              QUANTUM
+            </tspan>
+            <tspan
+              dx="14"
+              fill="#10b981"
+              fontWeight="500"
+              letterSpacing="0.08em"
+            >
+              MEDIA
+            </tspan>
           </text>
 
           {showTagline && (
